@@ -4,7 +4,7 @@
   "description": "",
   "main": "index.js",
   "scripts": {
-    "verify-test": "npx hardhat verify --network rinkeby 0x884981571e312C6050c0aF6D965600448105B7D7 0x6810e029d24fa8a9ab73b6789a701621753b5b64",
+    "verify-test": "npx hardhat verify --network rinkeby 0x2553F5996D026b94CE7b515c5c3D3721E9bB2744",
     "hardhat-node": "npx hardhat node",
     "deploy-local": "npx hardhat run --network localhost scripts/hardhatDeploy.js",
     "deploy-test": "npx hardhat run --network rinkeby scripts/hardhatDeploy.js",
