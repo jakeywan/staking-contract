@@ -1,9 +1,9 @@
 async function main() {
   // We get the contract to deploy
-  const Vibez = await ethers.getContractFactory('Vibez');
-  const vibez = await Vibez.deploy();
+  const Staking = await ethers.getContractFactory('Staking');
+  const staking = await Staking.deploy();
 
-  console.log('DEPLOYED TO', vibez.address);
+  console.log('DEPLOYED TO', staking.address);
 }
 
 main()
