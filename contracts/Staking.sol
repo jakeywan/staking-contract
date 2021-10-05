@@ -21,11 +21,12 @@ contract Staking {
     function deposit(uint256 amount) external {
         require(amount > 0, "Cannot stake nothing");
         require(stakingToken.balanceOf(msg.sender) >= amount, "Balance too low");
+        uint256 allowance = stakingToken.allowance(msg.sender, address(this));
+        require(allowance >= amount, "Token allowance not granted");
 
         totalSupply += amount;
         balances[msg.sender] += amount;
 
-        stakingToken.approve(address(this), amount);
         stakingToken.transferFrom(msg.sender, address(this), amount);
 
         emit Staked(msg.sender, amount);
