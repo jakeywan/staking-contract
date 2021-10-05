@@ -1,0 +1,1 @@
+proof of concept staking mechanism (code from https://github.com/Nikhil-Kulkarni)
