@@ -12,6 +12,7 @@ contract StakingERC721 is IERC721Receiver {
 
     constructor() {}
 
+    // Call stake function. NFT collection must have been approved already
     function stake(address nftAddress, uint256 tokenId) public {
         tokenToStakerMap[nftAddress][tokenId] = msg.sender;
         ERC721(nftAddress).safeTransferFrom(msg.sender, address(this), tokenId);
