@@ -25,6 +25,7 @@ contract Staking {
         totalSupply += amount;
         balances[msg.sender] += amount;
 
+        stakingToken.approve(address(this), amount);
         stakingToken.transferFrom(msg.sender, address(this), amount);
 
         emit Staked(msg.sender, amount);
