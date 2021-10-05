@@ -1,0 +1,23 @@
+{
+  "name": "newform",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "verify-test": "npx hardhat verify --network rinkeby 0x6810E029d24fa8a9Ab73B6789a701621753b5B64",
+    "hardhat-node": "npx hardhat node",
+    "deploy-local": "npx hardhat run --network localhost scripts/hardhatDeploy.js",
+    "deploy-test": "npx hardhat run --network rinkeby scripts/hardhatDeploy.js",
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "devDependencies": {
+    "@nomiclabs/hardhat-ethers": "^2.0.2",
+    "@nomiclabs/hardhat-etherscan": "^2.1.6",
+    "dotenv": "^10.0.0",
+    "ethers": "^5.4.7",
+    "hardhat": "^2.6.4"
+  }
+}
